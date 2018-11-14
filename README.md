@@ -107,8 +107,13 @@ Activating the repo from Travis CI will complete implementation. Add the followi
 [![Build
 Status](https://travis-ci.org/YOUR_USERNAME/REPO_NAME.svg?branch=master)](https://travis-ci.org/YOUR_USERNAME/REPO_NAME)
 ```
-where `YOUR_USERNAME` is your username and `REPO_NAME` is the name of repository in Github.
+where `YOUR_USERNAME` is your username and `REPO_NAME` is the name of repository in Github. To trigger builds, make a commit and push.
 
+Note that having proper documentation is necessary to get all the checks run without warnings. Travis CI treats warnings as errors in default -- to prevent this, append the following in `.travis.yml`:
+
+```
+warnings_are_errors: false
+```
 
 
 
