@@ -1,6 +1,6 @@
 
 [![Build
-Status](https://travis-ci.org/chiyahn/R-practice-repo.svg?branch=master)](https://travis-ci.org/chiyahn/R-practice-repo)
+Status](https://travis-ci.org/chiyahn/R-practice-repository.svg?branch=master)](https://travis-ci.org/chiyahn/R-practice-repository)
 
 ### Useful links:
 - R package primer: contains a minimal tutorial on R package build workflow, without CI setups. https://kbroman.org/pkg_primer/
