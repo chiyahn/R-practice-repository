@@ -6,7 +6,14 @@ Status](https://travis-ci.org/chiyahn/R-practice-repository.svg?branch=master)](
 ### Useful links:
 - R package primer: contains a minimal tutorial on R package build workflow, without CI setups. https://kbroman.org/pkg_primer/
 
-## Package Metadata
+# Setting up development environment
+## Getting started
+Click `File -> New Project`. Choose `New Directory`, and select `R Package`. After adding a package name, click on `Create Project`. This will create:
+
+- An `R/` directory for codes
+- `DESCRIPTION` and `NAMESPACE` for package metadata
+
+## Package metadata
 Once the first package file is created, fill in `DESCRIPTION` to add the package title, author, maintainer information, description, and license.
 ### Add project dependency
 If the package requires methods or dataset from other packages, one can add `Imports` field. For instance, to add `gapminder` as a required package, one can add
@@ -19,7 +26,7 @@ at the end of `DESCRIPTION` file. Note that this can be also done by running
 ```r
 usethis::use_package("gapminder")
 ```
-in R console. Completing `DESCRIPTION` will give something like 5ae4132. Note that this barely adds a package requirement; to use dependent packages within the package without calling `library`, `NAMESPACE` has to be modified. To do so, add the following line
+in R console. Completing `DESCRIPTION` will give something like 5ae4132. Note that this barely adds a package requirement; to use dependent packages within the package without calling `library`, import should be done in `NAMESPACE` too. To do so, add the following line
 ```r
 import(gapminder)
 ```
@@ -133,4 +140,3 @@ Activating the repo from codecov.io will complete implementation. Add the follow
 ```
 where `YOUR_USERNAME` is your username and `REPO_NAME` is the name of repository in Github.
 
-## (Optional, for package generation) Documentation with `Roxygen2`
