@@ -1,6 +1,7 @@
 
 [![Build
 Status](https://travis-ci.org/chiyahn/R-practice-repository.svg?branch=master)](https://travis-ci.org/chiyahn/R-practice-repository)
+[![codecov](https://codecov.io/gh/chiyahn/R-practice-repository/branch/master/graphs/badge.svg)](https://codecov.io/gh/chiyahn/R-practice-repository) 
 
 ### Useful links:
 - R package primer: contains a minimal tutorial on R package build workflow, without CI setups. https://kbroman.org/pkg_primer/
@@ -115,6 +116,21 @@ Note that having proper documentation is necessary to get all the checks run wit
 warnings_are_errors: false
 ```
 
+## Using codecov.io
+Append the followings to `.travis.yml`:
+```
+r_packages:
+  - covr
 
+after_success:
+  - Rscript -e 'library(covr); codecov()'
+```
+
+Activating the repo from codecov.io will complete implementation. Add the following line in `README.md` to add a badge for test coverage status:
+
+```
+[![codecov](https://codecov.io/gh/YOUR_USERNAME/REPO_NAME/branch/master/graphs/badge.svg)](https://codecov.io/gh/YOUR_USERNAME/REPO_NAME) 
+```
+where `YOUR_USERNAME` is your username and `REPO_NAME` is the name of repository in Github.
 
 ## (Optional, for package generation) Documentation with `Roxygen2`
