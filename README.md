@@ -8,10 +8,15 @@ Status](https://travis-ci.org/chiyahn/R-practice-repository.svg?branch=master)](
 
 # Setting up development environment
 ## Getting started
-Click `File -> New Project`. Choose `New Directory`, and select `R Package`. After adding a package name, click on `Create Project`. This will create:
+In RSTudio, click `File -> New Project`. Choose `New Directory`, and select `R Package`. After adding a package name `findavg`, click on `Create Project`. This will create:
 
 - An `R/` directory for codes
 - `DESCRIPTION` and `NAMESPACE` for package metadata
+
+One can alternatively run the following line in R console to get the barebone:
+```r
+usethis::create_package("findavg")
+```
 
 ## Package metadata
 Once the first package file is created, fill in `DESCRIPTION` to add the package title, author, maintainer information, description, and license.
